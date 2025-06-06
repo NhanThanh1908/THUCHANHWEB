@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .star-rating {
+    display: flex;
+    direction: rtl;
+    font-size: 2em;
+    justify-content: center;}
+    .star-rating input[type="radio"] {
+    display: none;}
+    .star-rating label {
+    color: lightgray;
+    cursor: pointer;
+    transition: color 0.2s;}
+    .star-rating input[type="radio"]:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label { color: gold;}
+</style>
+</head>
+<body>
+    <form>
+        <h1>Khảo sát người dùng về TikTok</h1>
+        Họ và tên: <input type="text"><br></br>
+        Email: <input type="text">
+        <p>Đánh giá: </p>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" > <label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="2" > <label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3" > <label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="4" > <label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="5" > <label for="star1">★</label>
+        </div>
+         <p>Ý kiến khác: </p>
+        <textarea name="feedback" rows="3" cols="30" placeholder="Nhập ý kiến của bạn..."></textarea>
+    </form>
+</body>
+</html>
