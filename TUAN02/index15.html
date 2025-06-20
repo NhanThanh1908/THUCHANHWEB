@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        border: 2px;
+        border-radius: 3px;
+        border-style: dotted;
+    }
+    h1{
+        font-style: italic;
+        color:brown;
+    }
+    input{
+        border-radius: 10px;
+        box-shadow: 3px 3px;
+    }
+    input:hover{
+        background-color: bisque;
+        box-shadow: 0px 0px;
+    }
+    button{
+        box-shadow: 3px 3px;
+    }
+    button:hover{
+        color: white;
+        background-color: black;
+    }
+   </style>
+<body>
+    <form>
+    <h1>Thanh toán hóa đơn</h1>
+    Họ và tên: <input></input><br></br>
+    SĐT: <input></input><br></br>
+    Địa chỉ: <input></input><br></br>
+    <p>Hình thức thanh toán</p>
+    <label><input type="radio" name="pay" value="chuyển khoản ngân hàng">Chuyển khoản ngân hàng</label>
+    <label><input type="radio" name="pay" value="MoMo">MoMo</label>
+    <label><input type="radio" name="pay" value="ZaloPay">ZaloPay</label>
+    <label><input type="radio" name="pay" value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</label><br></br>
+    <button>Đặt hàng</button>
+    </form>
+</body>
+</html>
