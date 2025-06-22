@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .m1, .m2{
+        display:flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    .m2{
+        display:grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    .m3{
+        display: grid;
+    }
+    body{
+        text-align: left;
+    }
+    h1{
+        text-align: center;
+        font-style: italic;
+        color:brown;
+    }
+    input{
+        border-radius: 10px;
+        width: 150px;
+
+    }
+    input:hover{
+        background-color: beige;
+    }
+    select{
+        border-radius: 10px;
+    }
+    select:hover{
+        color: blue;
+    }
+    label{
+        display: block;
+    }
+    button:hover{
+        color: white;
+        background-color:black;
+    }
+    button{
+        box-shadow: 3px 3px;
+    }
+</style>
+<body>
+    <Form>
+        <h1>Khảo sát ý kiến người dùng về sản phẩm sữa rửa mặt</h1>
+        <p>Họ và tên:</p> 
+        <input><br>
+        <p>Giới tính:</p>
+        <div class="m1"> 
+        <input type="radio" name="gioitinh" value="Nam">Nam 
+        <input type="radio" name="gioitinh" value="Nữ">Nữ <br>
+        </div>
+        <p>Độ tuổi: </p>
+        <Select>
+            <option value="">Chọn độ tuổi</option>
+            <option value="18-23">18-23</option>
+            <option value="24-35">24-35</option>
+            <option value="36-50">36-50</option>
+            <option value="50+">Trên 50</option>
+        </Select><br></br>
+        <p>Đánh giá sản phẩm:</p>
+        <div class="m2">
+            <label><input type="checkbox">Sạch sâu</label>
+            <label><input type="checkbox">Lành tính</label>
+            <label><input type="checkbox">Phù hợp mọi loại da</label>
+            <label><input type="checkbox">Dễ sử dụng</label>
+            <label><input type="checkbox">Thiết kế đẹp mắt</label>
+        </div>
+        <p>Ý kiến khác: </p>
+        <div class="m3">
+            <textarea></textarea><br>
+        </div>
+        <Button>Gửi</Button>
+        </Form>
+</body>
+</html>
