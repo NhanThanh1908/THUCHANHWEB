@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .m1, .m2, .m3{
+        display:flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    h1{
+        font-size: 20px;
+        font-style: italic;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: beige;
+    }
+    input{
+        background-color: khaki;
+        border: 1px solid black;
+        border-radius: 30px;
+        border-style:dashed;
+    }
+    button{
+        color: blue;
+        background-color: mediumseagreen;
+        border: 2px solid black;
+        border-radius: 5px;
+        border-style: double;
+    }
+</style>
+<body>
+    <div class="container">
+    <h1>Đăng ký thông tin cá nhân</h1>
+    <div class="m1">
+    Họ và tên: <input type="text"><br>
+    </div>
+    <div class="m2">
+    Email: <input type="text"><br></br>
+    </div>
+    <div class="m3">
+    Số điện thoại: <input><br></br>
+    </div>
+    <div class="gioitinh">
+    Giới tính: 
+    <input type="radio" name="gioitinh" value="nam"> Nam
+    <input type="radio" name="gioitinh" value="nữ"> Nữ<br>
+    </div>
+    </div>
+    <button>Gửi</button>
+</body>
+</html>
