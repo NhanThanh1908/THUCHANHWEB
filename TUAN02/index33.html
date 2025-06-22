@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        gap:20px;
+    }
+    .m1, .m2{
+        flex:1;
+        display:flex;
+        flex-direction: column;
+    }
+    form{
+        border: 2px;
+        border-radius: 5px;
+        border-style: dashed;
+        box-shadow: 5px 5px;
+    }
+    h1{
+        color:brown;
+        font-style: italic;
+    }
+    p{
+        font-weight: bold;
+    }
+    input{
+        border-radius: 10px;
+    }
+    input:hover{
+        background-color:beige;
+    }
+    select{
+        width: auto;
+        border-radius: 10px;
+    }
+    textarea{
+        border-radius: 10px;
+    }
+    textarea:hover{
+        background-color: beige;
+    }
+    .nut{
+        text-align: end;
+    }
+    button:hover{
+        color: white;
+        background-color: black;
+    }
+</style>
+<body>
+    <form>
+        <h1>Đặt bàn quán ăn</h1>
+        <p>Họ và tên:</p>
+            <input><br>
+        <div class="container">
+        <div class="m1">
+        <p>Số người:</p>
+        <select>
+            <option value="">Chọn số người</option>
+            <option value="1">1 người</option>
+            <option value="2">2 người</option>
+            <option value="3">3 người</option>
+            <option value="4">4 người</option>
+            <option value="5+">5 người trở lên</option>
+        </select>
+        <div>
+        <p>Ngày giờ đặt bàn:</p>
+            <input type="datetime-local" name="thoigian">
+        </div>
+        </div>
+        <div class="m2">
+        <p>Yêu cầu đặc biệt:</p>
+            <textarea ></textarea>
+        </div>
+        </div>
+        <div class="nut">
+        <button>Đặt bàn</button>
+        </div>
+        </form>
+</body>
+</html>
