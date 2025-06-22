@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display:grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    .card{
+        border: 2px solid blue;
+        border-radius: 5px; 
+        text-align: center;
+        box-shadow: 3px 3px;
+    }
+    h1{
+        font-style: italic;
+        color:brown;
+    }
+    #m1, #m3 {
+        background-color: aquamarine;
+    }
+    #m2, #m4 {
+        background-color: bisque;
+    }
+</style>
+<body>
+    <h1>Môn học yêu thích</h1>
+    <div class="container">
+        <div class="card" id="m1">Môn Ngữ Văn</div>
+        <div class="card" id="m2">Môn Lịch Sử</div>
+        <div class="card" id="m3">Môn Địa lý</div>
+        <div class="card" id="m4">Môn Ngoại Ngữ</div>
+    </div>
+</body>
+</html>
