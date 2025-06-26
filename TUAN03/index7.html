@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        color:brown;
+        font-style: italic;
+    }
+    .container{
+        display:grid;
+        grid-template-areas: "m1 m2 m3"
+                            "m4 m5 m6";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:20px;
+    }
+    img{
+        width: auto;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h1>Thư viện ảnh</h1>
+    <div class="container">
+        <div id="m1" class="item">
+            <img src="https://picsum.photos/200/300" alt="">
+        </div>
+        <div id="m2" class="item">
+            <img src="https://picsum.photos/200/300/?blur" alt="">
+        </div>
+        <div id="m3" class="item">
+            <img src="https://picsum.photos/id/237/200/300" alt="">
+        </div>
+        <div id="m4" class="item">
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+        </div>
+        <div id="m5" class="item">
+            <img src="https://picsum.photos/200/300?grayscale" alt="">
+        </div>
+    </div>
+</body>
+</html>
