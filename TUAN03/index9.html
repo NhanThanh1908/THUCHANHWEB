@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+    .container{
+        display:grid;
+        grid-template-rows: 1fr;
+        grid-template-areas: "m1"
+                            "m2";
+        gap:10px;
+    }
+    .item{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    figcaption{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: bold;
+        color:brown;
+    }
+    audio{
+        color:cadetblue;
+        border: 2px;
+        border-color:rgb(23, 85, 138);
+        border-style: dashed;
+        border-radius: 30px;
+        box-shadow: 3px 3px;
+    }
+</style>
+<body>
+    <div class="container">
+    <div id="m1" class="item">
+    <figcaption>File Audio</figcaption>
+    </div>
+    <div id="m2" class="item">
+    <audio controls autoplay>
+        <source src="Hinhanh/sapne-bade-305719.mp3" type="audio/mpeg">
+    </audio>
+    </div>
+    </div>
+</body>
+</html>
