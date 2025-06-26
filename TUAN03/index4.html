@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color:brown;
+        font-style: italic;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        margin: 10px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .item1, .item2, .item3{
+        color: crimson;
+    }
+    input{
+        border-radius: 5px;
+    }
+    .item4{
+        display:flex;
+        justify-content: end;
+        margin: 10px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px;
+    }
+    button:hover{
+        color:white;
+        background-color: black;
+    }
+    form{
+        border-radius: 10px;
+        border-style: dashed;
+    }
+</style>
+<body>
+    <form>
+        <h1>Đăng ký thông tin</h1>
+        <div class="container">
+        <div class="item1">
+            Họ và tên: <input>       
+        </div>
+        <div class="item2">
+            SĐT: <input>
+        </div>
+        <div class="item3">
+            Email: <input>
+        </div>
+        </div>
+        <div class="item4">
+        <button>
+            Gửi
+        </button>
+        </div>
+    </form>
+</body>
+</html>
