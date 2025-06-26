@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        font-style: italic;
+        color:brown;
+        text-align: center;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        border: 1px;
+    }
+    .tieude,.m1, .m2, .m3, .m4, .m5{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: red;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: beige;
+    }
+</style>
+<body>
+  <h1>Thời khóa biểu</h1>
+  <div class="container">
+    <div class="tieude">
+      <div class="item1">Thứ</div>
+      <div class="item2">Môn học</div>
+      <div class="item3">Giờ học</div>
+      <div class="item4">Phòng học</div>
+    </div>
+    <div class="m1">
+      <div>Thứ hai</div>
+      <div>Ngữ Văn</div>
+      <div>9h</div>
+      <div>101</div>
+    </div>
+    <div class="m2">
+      <div>Thứ ba</div>
+      <div>Toán</div>
+      <div>13h</div>
+      <div>105</div>
+    </div>
+    <div class="m3">
+      <div>Thứ tư</div>
+      <div>Lịch Sử</div>
+      <div>15h</div>
+      <div>102</div>
+    </div>
+    <div class="m4">
+      <div>Thứ năm</div>
+      <div>Địa lý</div>
+      <div>16h</div>
+      <div>104</div>
+    </div>
+
+    <div class="m5">
+      <div>Thứ sáu</div>
+      <div>Anh Văn</div>
+      <div>6h</div>
+      <div>108</div>
+    </div>
+  </div>
+</body>
+</html>
