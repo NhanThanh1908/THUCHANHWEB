@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin:10px;
+        gap:10px;
+    }
+    .m1, .m2{
+        display:flex;
+        flex-direction: column;
+    }
+    form{
+        border: 2px;
+        border-radius: 5px;
+        border-style:groove;
+        box-shadow: 5px 5px;
+    }
+    h1{
+        color:brown;
+        font-style: italic;
+        text-align: center;
+        margin:10px;
+    }
+    p{
+        font-weight: bold;
+    }
+    input{
+        border-radius: 10px;
+    }
+    input:hover{
+        background-color:beige;
+    }
+    select{
+        width: auto;
+        border-radius: 10px;
+    }
+    textarea{
+        border-radius: 10px;
+    }
+    textarea:hover{
+        background-color: beige;
+    }
+    .m3{
+        text-align: end;
+        margin:10px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px;
+    }
+    button:hover{
+        color: white;
+        background-color: black;
+    }
+</style>
+<body>
+    <form>
+        <h1>Đặt bàn quán ăn</h1>
+        <div class="container">
+        <div class="m1">
+        <p>Họ và tên:</p> <input> 
+        <p>Số người:</p>
+        <select>
+            <option value="">Chọn số người</option>
+            <option value="1">1 người</option>
+            <option value="2">2 người</option>
+            <option value="3">3 người</option>
+            <option value="4">4 người</option>
+            <option value="5+">5 người trở lên</option>
+        </select>
+        <p>Ngày giờ đặt bàn:</p>
+            <input type="datetime-local" name="thoigian">
+        </div>
+        <div class="m2">
+        <p>Yêu cầu đặc biệt:</p>
+            <textarea ></textarea>
+        </div>
+        </div>
+        <div class="m3">
+        <button>Đặt bàn</button>
+        </div>
+        </form>
+</body>
+</html>
