@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    p{
+        background-color: antiquewhite;
+        color:brown;
+        box-shadow: 3px 3px 5px;
+    }
+</style>
+<body>
+    <input id="name" type="text">
+    <button onclick="clicked()">Xin chào</button>
+    <p id="xinchao"></p>
+    <script>
+        function clicked() {
+            var ten=document.getElementById("name").value;
+            document.getElementById("xinchao").innerText="Hello " + ten;
+        }
+    </script>
+</body>
+</html>
