@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    .error{
+        color: red;
+    }
+    .success{
+        color: blue;
+    }
+</style>
+<body>
+    <input id="nhap" type="text" placeholder="DD-MM-YYYY">
+    <button onclick="clicked()">Kiểm tra ngày</button>
+    <p id="ketqua"></p>
+    <script>
+        function clicked(){
+            var ngaythang=document.getElementById("nhap").value;
+            if(!/^\d{2}-\d{2}-\d{4}$/.test(ngaythang)){
+                document.getElementById("ketqua").innerText="Định dạng ngày tháng không hợp lệ";
+            }
+            var phan=ngaythang.split("-");
+            var ngay=Number(phan[0]);
+            var thang=Number(phan[1]);
+            var nam=Number(phan[2]);
+            var date=new Date(nam, thang - 1, ngay);
+            console.log(date);
+            if (date.getDate()==ngay && date.getMonth()==thang - 1 && date.getFullYear()==nam){
+                document.getElementById("ketqua").innerText="Ngày tháng năm hợp lệ";
+                ketqua.className="success";
+            }
+            else{
+                document.getElementById("ketqua").innerText="Ngày tháng năm không hợp lệ";
+                ketqua.className="error";
+            }
+        }
+    </script>
+</body>
+</html>
