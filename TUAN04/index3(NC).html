@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    .error{
+        color: red;
+    }
+    .success{
+        color: blue;
+    }
+</style>
+<body>
+    <input id="nhap1" type="text" placeholder="Nhập vào một số">
+    <input id="nhap2" type="text" placeholder="Nhập vào số điện thoại">
+    <button onclick="clicked()">Kiểm tra</button>
+    <p id="xuat"></p>
+    <script>
+        function clicked(){
+            var kiemtraso=document.getElementById("nhap1").value;
+            var sdt=document.getElementById("nhap2").value;
+            if (/\d+/.test(kiemtraso)&&/\d{10}/.test(sdt)){
+                document.getElementById("xuat").innerText="OK";
+                xuat.className="success";
+            }
+            else{
+                document.getElementById("xuat").innerText="Error";
+                xuat.className="error"
+            }
+        }
+    </script>
+</body>
+</html>
