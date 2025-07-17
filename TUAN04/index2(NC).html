@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    .error{
+        color: red;
+    }
+    .success{
+        color: blue;
+    }
+</style>
+<body>
+    <input id="nhap" type="text" placeholder=""Nhập vào số điện thoại>
+    <button onclick="clicked()">Kiểm tra SĐT</button>
+    <p id="xuat"></p>
+    <script>
+        function clicked() {
+            var sdt=document.getElementById("nhap").value;
+            if (/\d{10}/.test(sdt)) {
+                document.getElementById("xuat").innerText="SĐT: " + sdt;
+                xuat.className="success";
+            }
+            else{
+                document.getElementById("xuat").innerText="Đây không phải số điện thoại";
+                xuat.className="error"
+            }
+        }
+    </script>
+</body>
+</html>
