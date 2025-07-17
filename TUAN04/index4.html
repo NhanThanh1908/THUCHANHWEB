@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    p{
+        background-color: antiquewhite;
+        color:brown;
+        box-shadow: 3px 3px 5px;
+    }
+</style>
+<body>
+    <input id="so_a" type="text" placeholder="Nhập vào số a">
+    <input id="so_b" type="text" placeholder="Nhập vào số b">
+    <button onclick="clicked()">Tính tổng</button>
+    <p id="ketqua"></p>
+    <script>
+        function clicked(){
+            var a=document.getElementById("so_a").value;
+            var b=document.getElementById("so_b").value;
+            var sum=Number(a)+Number(b)
+            console.log(sum)
+            document.getElementById("ketqua").innerText="Tổng hai số a và b là: " + sum
+        }
+    </script>
+</body>
+</html>
