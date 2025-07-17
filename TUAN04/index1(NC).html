@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    .loi{
+        color: red;
+    }
+    .dung{
+        color: blue;
+    }
+</style>
+<body>
+    <input id="nhap" type="text" placeholder="Nhập vào một số">
+    <button onclick="clicked()">Kiểm tra số</button>
+    <p id="xuat"></p>
+    <script>
+        function clicked() {
+            var kiemtraso=document.getElementById("nhap").value;
+            if (isNaN(kiemtraso)) {
+                document.getElementById("xuat").innerText="Bạn nhập không phải là số";
+                xuat.className="loi";
+            }
+            else{
+                document.getElementById("xuat").innerText="Bạn vừa nhập số: " + kiemtraso;
+                xuat.className="dung";
+            }
+        }
+    </script>
+</body>
+</html>
