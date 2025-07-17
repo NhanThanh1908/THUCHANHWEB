@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    .error{
+        color: red;
+    }
+    .success{
+        color: blue;
+    }
+</style>
+<body>
+    <input id="nhap" type="text" placeholder="DD-MM-YYYY">
+    <button onclick="clicked()">Kiểm tra</button>
+    <p id="ketqua"></p>
+    <script>
+        function clicked(){
+            var input=document.getElementById("nhap").value;
+            if (!/^\d{2}-\d{2}-\d{4}$/.test(input)){
+                document.getElementById("ketqua").innerText="Định dạng ngày tháng không hợp lệ";
+            }
+            var phan=input.split("-");
+            var ngay=Number(phan[0]);
+            var thang=Number(phan[1]);
+            var nam=Number(phan[2]);
+            var date=new Date(nam, thang - 1, ngay);
+            console.log("Ngày tháng năm nhập là: " + date);
+            var today=new Date();
+            today.setHours(0, 0, 0, 0);
+            console.log("Ngày tháng năm hiện tại là: " + today);
+            if (date.getDate()==ngay && date.getMonth()==thang - 1 && date.getFullYear()==nam){
+                if (date>today){
+                    document.getElementById("ketqua").innerText="Ngày tháng này sau ngày hiện tại";
+                    ketqua.className="success";
+                }
+                else{
+                    document.getElementById("ketqua").innerText="Ngày tháng này là ngày hiện tại";
+                    ketqua.className="success";
+                }
+            }
+            else{
+                document.getElementById("ketqua").innerText="Ngày tháng năm không hợp lệ";
+                ketqua.className="error";
+            }
+        }
+    </script>
+</body>
+</html>
