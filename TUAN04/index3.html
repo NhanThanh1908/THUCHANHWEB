@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px;
+    }
+    button:hover{
+        color: white;
+        background-color: green;
+    }
+    p{
+        background-color: antiquewhite;
+        color:brown;
+        box-shadow: 3px 3px 5px;
+    }
+</style>
+<body>
+    <input id="noidung" type="text">
+    <button onclick="clicked()">Kiểm tra</button>
+    <p id="kiemtra"></p>
+    <script>
+        function clicked() {
+            var xuat=document.getElementById("noidung").value.trim();
+            if (xuat==""){
+                document.getElementById("kiemtra").innerText="Chưa nhập";
+            }
+            else if (/\d+/.test(xuat)){
+                document.getElementById("kiemtra").innerText="Bạn mới nhập số: " + xuat;
+            }
+            else {
+                document.getElementById("kiemtra").innerText="Bạn mới vừa nhập 1 text: " + xuat;
+            }
+        }
+    </script>
+<body>
+</html>
