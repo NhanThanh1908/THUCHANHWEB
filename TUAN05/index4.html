@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tính tuổi</h3>
+    <input id="nhap" type="date">
+    <button onclick="clicked()">Tính tuổi</button>
+    <p id="ketqua"></p>
+    <script>
+        function clicked() {
+            var date = new Date(document.getElementById("nhap").value);
+            console.log(date)
+            var namsinh = date.getFullYear(date)
+            today = new Date()
+            var namhientai = today.getFullYear();
+            if (namhientai - namsinh >= 18) {
+                document.getElementById("ketqua").innerText = "Tuổi của bạn là: " + (namhientai - namsinh);
+            } else {
+                document.getElementById("ketqua").innerText = "Bạn nhỏ hơn 18 tuổi";
+            }
+        }
+    </script>
+</body>
+
+</html>
