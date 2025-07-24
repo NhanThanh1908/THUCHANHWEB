@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Kiểm tra ngày sinh</h3>
+    <input id="nhap" type="date">
+    <button onclick="clicked()">Kiểm tra</button>
+    <p id="ketqua"></p>
+    <script>
+        today = new Date()
+
+        function clicked() {
+            var date = new Date(document.getElementById("nhap").value);
+            console.log(date)
+            var ngaysinh = date.getDate(date)
+            var thangsinh = date.getMonth(date) + 1
+            var namsinh = date.getFullYear(date)
+            if (today > date) {
+                document.getElementById("ketqua").innerText = "Ngày sinh của bạn là: " + ngaysinh + "/" + thangsinh + "/" + namsinh;
+            } else {
+                document.getElementById("ketqua").innerText = "Ngày sinh không hợp lệ";
+            }
+        }
+    </script>
+</body>
+
+</html>
