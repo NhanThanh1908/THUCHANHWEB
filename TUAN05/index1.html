@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="nhap" type="date">
+    <button onclick="clicked()">Kiểm tra</button>
+    <p id="ketqua"></p>
+    <script>
+        var today = new Date();
+        today.setHours(7, 0, 0, 0)
+
+        function clicked() {
+            var date = new Date(document.getElementById("nhap").value)
+            console.log(date)
+            if (today > date) {
+                console.log("Past")
+                document.getElementById("ketqua").innerText = "Ngày trong quá khứ"
+            } else if (today < date) {
+                console.log("Future")
+                document.getElementById("ketqua").innerText = "Ngày trong tương lai"
+            } else {
+                console.log("Present")
+                document.getElementById("ketqua").innerText = "Ngày ở hiện tại"
+            }
+        }
+    </script>
+</body>
+
+</html>
