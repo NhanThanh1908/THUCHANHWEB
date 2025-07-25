@@ -176,5 +176,24 @@
             }
         }
     </script>
+    <h3>Câu 9: Kiểm tra Thẻ tín dụng</h3>
+    <input id="nhap9" type="text">
+    <button onclick="clicked9()">Kiểm tra</button>
+    <p id="ketqua9"></p>
+    <script>
+        function clicked9() {
+            var tindung=document.getElementById("nhap9").value;
+            console.log(tindung);
+            var kiemtratindung=/^(\d{4} ?){4}$/
+            if (kiemtratindung.test(tindung)){
+                document.getElementById("ketqua9").innerText="Thẻ tín dụng "+tindung+" hợp lý";
+                ketqua9.className = "success"
+            }
+            else {
+                document.getElementById("ketqua9").innerText="Thẻ tín dụng "+tindung+" không hợp lý"
+                ketqua9.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
