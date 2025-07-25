@@ -52,5 +52,24 @@
             }
         }
     </script>
+    <h3>Câu 3: Kiểm tra mật khẩu</h3>
+    <input id="nhap3" type="text">
+    <button onclick="clicked3()">Kiểm tra</button>
+    <p id="ketqua3"></p>
+    <script>
+        function clicked3() {
+            var pass=document.getElementById("nhap3").value;
+            console.log(pass);
+            var kiemtrapass=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+            if (kiemtrapass.test(pass)){
+                document.getElementById("ketqua3").innerText="Mật khẩu "+pass+" hợp lý";
+                ketqua3.className = "success"
+            }
+            else {
+                document.getElementById("ketqua3").innerText="Mật khẩu "+pass+" không hợp lý"
+                ketqua3.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
