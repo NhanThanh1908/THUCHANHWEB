@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .success{
+        color: blue;
+    }
+    .error{
+        color: red;
+    }
+</style>
+<body>
+    <h3>Câu 1: Kiểm tra Email</h3>
+    <input id="nhap1" type="text">
+    <button onclick="clicked1()">Kiểm tra</button>
+    <p id="ketqua1"></p>
+    <script>
+        function clicked1() {
+            var email=document.getElementById("nhap1").value;
+            console.log(email);
+            var kiemtraemail=/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9]*[a-z0-9])?/g
+            if (kiemtraemail.test(email)){
+                document.getElementById("ketqua1").innerText="Eamil "+email+" hợp lý";
+                ketqua1.className = "success"
+            }
+            else {
+                document.getElementById("ketqua1").innerText="Email "+email+" không hợp lý"
+                ketqua1.className = "error"
+            }
+        }
+    </script>
+</body>
+</html>
