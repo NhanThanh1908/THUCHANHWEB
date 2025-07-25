@@ -33,5 +33,24 @@
             }
         }
     </script>
+    <h3>Câu 2: Kiểm tra SDT</h3>
+    <input id="nhap2" type="text">
+    <button onclick="clicked2()">Kiểm tra</button>
+    <p id="ketqua2"></p>
+    <script>
+        function clicked2() {
+            var sdt=document.getElementById("nhap2").value;
+            console.log(sdt);
+            var kiemtrasdt=/^0\d{9}$/
+            if (kiemtrasdt.test(sdt)){
+                document.getElementById("ketqua2").innerText="Số điện thoại "+sdt+" hợp lý";
+                ketqua2.className = "success"
+            }
+            else {
+                document.getElementById("ketqua2").innerText="Số điện thoại "+sdt+" không hợp lý"
+                ketqua2.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
