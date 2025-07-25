@@ -119,5 +119,24 @@
             }
         }
     </script>
+    <h3>Câu 6: Kiểm tra Username</h3>
+    <input id="nhap6" type="text">
+    <button onclick="clicked6()">Kiểm tra</button>
+    <p id="ketqua6"></p>
+    <script>
+        function clicked6() {
+            var username=document.getElementById("nhap6").value;
+            console.log(username);
+            var kiemtrausername=/^[a-zA-Z0-9_]{5,15}$/
+            if (kiemtrausername.test(username)){
+                document.getElementById("ketqua6").innerText="Username "+username+" hợp lý";
+                ketqua6.className = "success"
+            }
+            else {
+                document.getElementById("ketqua6").innerText="Username "+username+" không hợp lý"
+                ketqua6.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
