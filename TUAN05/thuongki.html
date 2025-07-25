@@ -157,5 +157,24 @@
             }
         }
     </script>
+    <h3>Câu 8: Kiểm tra Mã bưu điện</h3>
+    <input id="nhap8" type="text">
+    <button onclick="clicked8()">Kiểm tra</button>
+    <p id="ketqua8"></p>
+    <script>
+        function clicked8() {
+            var buudien=document.getElementById("nhap8").value;
+            console.log(buudien);
+            var kiemtrabuudien=/^\d{5}$/
+            if (kiemtrabuudien.test(buudien)){
+                document.getElementById("ketqua8").innerText="Mã bưu điện "+buudien+" hợp lý";
+                ketqua8.className = "success"
+            }
+            else {
+                document.getElementById("ketqua8").innerText="Mã bưu điện "+buudien+" không hợp lý"
+                ketqua8.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
