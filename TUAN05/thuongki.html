@@ -138,5 +138,24 @@
             }
         }
     </script>
+    <h3>Câu 7: Kiểm tra IP</h3>
+    <input id="nhap7" type="text">
+    <button onclick="clicked7()">Kiểm tra</button>
+    <p id="ketqua7"></p>
+    <script>
+        function clicked7() {
+            var IP=document.getElementById("nhap7").value;
+            console.log(IP);
+            var kiemtraIP=/^\d{3}.\d{3}.\d{1}.\d{1}$/
+            if (kiemtraIP.test(IP)){
+                document.getElementById("ketqua7").innerText="IP "+IP+" hợp lý";
+                ketqua7.className = "success"
+            }
+            else {
+                document.getElementById("ketqua7").innerText="IP "+IP+" không hợp lý"
+                ketqua7.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
