@@ -195,5 +195,24 @@
             }
         }
     </script>
+    <h3>Câu 9: Kiểm tra URL</h3>
+    <input id="nhap10" type="text">
+    <button onclick="clicked10()">Kiểm tra</button>
+    <p id="ketqua10"></p>
+    <script>
+        function clicked10() {
+            var URL=document.getElementById("nhap10").value;
+            console.log(URL);
+            var kiemtraURL=/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/
+            if (kiemtraURL.test(URL)){
+                document.getElementById("ketqua10").innerText="URL "+URL+" hợp lý";
+                ketqua10.className = "success"
+            }
+            else {
+                document.getElementById("ketqua10").innerText="URL "+URL+" không hợp lý"
+                ketqua10.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
