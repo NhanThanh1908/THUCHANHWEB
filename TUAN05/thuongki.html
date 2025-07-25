@@ -90,5 +90,34 @@
             }
         }
     </script>
+    <h3>Câu 5: Kiểm tra ngày sinh</h3>
+    <input id="nhap5" type="text">
+    <button onclick="clicked5()">Kiểm tra</button>
+    <p id="ketqua5"></p>
+    <script>
+        function clicked5() {
+            var ngaysinh=document.getElementById("nhap5").value;
+            console.log(ngaysinh);
+            var kiemtrangaysinh=/^\d{2}-\d{2}-\d{4}$/
+            if (!kiemtrangaysinh.test(ngaysinh)){
+                document.getElementById("ketqua5").innerText="Định dạng ngày sinh không hợp lệ";
+                ketqua5.className = "error"
+            }
+            var phan=ngaysinh.split("-");
+            var ngay=Number(phan[0]);
+            var thang=Number(phan[1]);
+            var nam=Number(phan[2]);
+            var date=new Date(nam, thang - 1, ngay);
+            console.log(date);
+            if (date.getDate()==ngay && date.getMonth()==thang - 1 && date.getFullYear()==nam){
+                document.getElementById("ketqua5").innerText="Ngày sinh "+ngaysinh+" hợp lệ";
+                ketqua5.className="success";
+            }
+            else{
+                document.getElementById("ketqua5").innerText="Ngày sinh "+ngaysinh+" không hợp lệ";
+                ketqua5.className="error";
+            }
+        }
+    </script>
 </body>
 </html>
