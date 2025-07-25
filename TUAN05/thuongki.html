@@ -176,7 +176,7 @@
             }
         }
     </script>
-    <h3>Câu 9: Kiểm tra Thẻ tín dụng</h3>
+    <h3>Câu 10: Kiểm tra Thẻ tín dụng</h3>
     <input id="nhap9" type="text">
     <button onclick="clicked9()">Kiểm tra</button>
     <p id="ketqua9"></p>
@@ -214,5 +214,39 @@
             }
         }
     </script>
+    <button onclick="kiemTraTatCa()">Kiểm tra tất cả</button>
+    <p id="tongket"></p>
+    <script>
+    function kiemTraTatCa() {
+        clicked1();
+        clicked2();
+        clicked3();
+        clicked4();
+        clicked5();
+        clicked6();
+        clicked7();
+        clicked8();
+        clicked9();
+        clicked10();
+        var loi = 0;
+        if (ketqua1.className == "error") loi++;
+        if (ketqua2.className == "error") loi++;
+        if (ketqua3.className == "error") loi++;
+        if (ketqua4.className == "error") loi++;
+        if (ketqua5.className == "error") loi++;
+        if (ketqua6.className == "error") loi++;
+        if (ketqua7.className == "error") loi++;
+        if (ketqua8.className == "error") loi++;
+        if (ketqua9.className == "error") loi++;
+        if (ketqua10.className == "error") loi++;
+        if (loi == 0) {
+            document.getElementById("tongket").innerText = "Tất cả thông tin hợp lệ!";
+            tongket.className = "success";
+        } else {
+            document.getElementById("tongket").innerText = "Có " + loi + " thông tin không hợp lệ.";
+            tongket.className = "error";
+        }
+    }
+</script>
 </body>
 </html>
