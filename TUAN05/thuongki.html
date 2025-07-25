@@ -71,5 +71,24 @@
             }
         }
     </script>
+    <h3>Câu 4: Kiểm tra họ tên</h3>
+    <input id="nhap4" type="text">
+    <button onclick="clicked4()">Kiểm tra</button>
+    <p id="ketqua4"></p>
+    <script>
+        function clicked4() {
+            var ten=document.getElementById("nhap4").value;
+            console.log(ten);
+            var kiemtraten=/^[a-zA-Z\s]+$/
+            if (kiemtraten.test(ten)){
+                document.getElementById("ketqua4").innerText="Họ tên "+ten+" hợp lý";
+                ketqua4.className = "success"
+            }
+            else {
+                document.getElementById("ketqua4").innerText="Họ tên "+ten+" không hợp lý"
+                ketqua4.className = "error"
+            }
+        }
+    </script>
 </body>
 </html>
