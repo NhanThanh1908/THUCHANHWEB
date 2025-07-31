@@ -7,7 +7,7 @@
 </head>
 <style>
     .success{
-        color: blue;
+        color: green;
     }
     .error{
         color: red;
@@ -26,10 +26,12 @@
             if (kiemtraemail.test(email)){
                 document.getElementById("ketqua1").innerText="Eamil "+email+" hợp lý";
                 ketqua1.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua1").innerText="Email "+email+" không hợp lý"
                 ketqua1.className = "error"
+                return false
             }
         }
     </script>
@@ -45,10 +47,12 @@
             if (kiemtrasdt.test(sdt)){
                 document.getElementById("ketqua2").innerText="Số điện thoại "+sdt+" hợp lý";
                 ketqua2.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua2").innerText="Số điện thoại "+sdt+" không hợp lý"
                 ketqua2.className = "error"
+                return false
             }
         }
     </script>
@@ -64,10 +68,12 @@
             if (kiemtrapass.test(pass)){
                 document.getElementById("ketqua3").innerText="Mật khẩu "+pass+" hợp lý";
                 ketqua3.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua3").innerText="Mật khẩu "+pass+" không hợp lý"
                 ketqua3.className = "error"
+                return false
             }
         }
     </script>
@@ -83,10 +89,12 @@
             if (kiemtraten.test(ten)){
                 document.getElementById("ketqua4").innerText="Họ tên "+ten+" hợp lý";
                 ketqua4.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua4").innerText="Họ tên "+ten+" không hợp lý"
                 ketqua4.className = "error"
+                return false
             }
         }
     </script>
@@ -102,6 +110,7 @@
             if (!kiemtrangaysinh.test(ngaysinh)){
                 document.getElementById("ketqua5").innerText="Định dạng ngày sinh không hợp lệ";
                 ketqua5.className = "error"
+                return true
             }
             var phan=ngaysinh.split("-");
             var ngay=Number(phan[0]);
@@ -112,10 +121,12 @@
             if (date.getDate()==ngay && date.getMonth()==thang - 1 && date.getFullYear()==nam){
                 document.getElementById("ketqua5").innerText="Ngày sinh "+ngaysinh+" hợp lệ";
                 ketqua5.className="success";
+                return true
             }
             else{
                 document.getElementById("ketqua5").innerText="Ngày sinh "+ngaysinh+" không hợp lệ";
-                ketqua5.className="error";
+                ketqua5truessName="error";
+                return false
             }
         }
     </script>
@@ -131,10 +142,12 @@
             if (kiemtrausername.test(username)){
                 document.getElementById("ketqua6").innerText="Username "+username+" hợp lý";
                 ketqua6.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua6").innerText="Username "+username+" không hợp lý"
                 ketqua6.className = "error"
+                return false
             }
         }
     </script>
@@ -150,10 +163,12 @@
             if (kiemtraIP.test(IP)){
                 document.getElementById("ketqua7").innerText="IP "+IP+" hợp lý";
                 ketqua7.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua7").innerText="IP "+IP+" không hợp lý"
                 ketqua7.className = "error"
+                return false
             }
         }
     </script>
@@ -169,10 +184,12 @@
             if (kiemtrabuudien.test(buudien)){
                 document.getElementById("ketqua8").innerText="Mã bưu điện "+buudien+" hợp lý";
                 ketqua8.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua8").innerText="Mã bưu điện "+buudien+" không hợp lý"
                 ketqua8.className = "error"
+                return false
             }
         }
     </script>
@@ -188,10 +205,12 @@
             if (kiemtratindung.test(tindung)){
                 document.getElementById("ketqua9").innerText="Thẻ tín dụng "+tindung+" hợp lý";
                 ketqua9.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua9").innerText="Thẻ tín dụng "+tindung+" không hợp lý"
                 ketqua9.className = "error"
+                return false
             }
         }
     </script>
@@ -207,10 +226,12 @@
             if (kiemtraURL.test(URL)){
                 document.getElementById("ketqua10").innerText="URL "+URL+" hợp lý";
                 ketqua10.className = "success"
+                return true
             }
             else {
                 document.getElementById("ketqua10").innerText="URL "+URL+" không hợp lý"
                 ketqua10.className = "error"
+                return false
             }
         }
     </script>
@@ -228,22 +249,11 @@
         clicked8();
         clicked9();
         clicked10();
-        var loi = 0;
-        if (ketqua1.className == "error") loi++;
-        if (ketqua2.className == "error") loi++;
-        if (ketqua3.className == "error") loi++;
-        if (ketqua4.className == "error") loi++;
-        if (ketqua5.className == "error") loi++;
-        if (ketqua6.className == "error") loi++;
-        if (ketqua7.className == "error") loi++;
-        if (ketqua8.className == "error") loi++;
-        if (ketqua9.className == "error") loi++;
-        if (ketqua10.className == "error") loi++;
-        if (loi == 0) {
+        if (clicked1()&&clicked2()&&clicked3()&&clicked4()&&clicked5()&&clicked6()&&clicked7()&&clicked8()&&clicked9()&&clicked10()) {
             document.getElementById("tongket").innerText = "Tất cả thông tin hợp lệ!";
             tongket.className = "success";
         } else {
-            document.getElementById("tongket").innerText = "Có " + loi + " thông tin không hợp lệ.";
+            document.getElementById("tongket").innerText = "Thông tin không hợp lệ.";
             tongket.className = "error";
         }
     }
