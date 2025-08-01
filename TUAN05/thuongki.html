@@ -85,7 +85,7 @@
         function clicked4() {
             var ten=document.getElementById("nhap4").value;
             console.log(ten);
-            var kiemtraten=/^[a-zA-Z\s]+$/
+            var kiemtraten=/^[a-zA-ZÀ-ỹ\s]+$/
             if (kiemtraten.test(ten)){
                 document.getElementById("ketqua4").innerText="Họ tên "+ten+" hợp lý";
                 ketqua4.className = "success"
